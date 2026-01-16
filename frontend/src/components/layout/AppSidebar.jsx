@@ -53,7 +53,7 @@ export function AppSidebar() {
 
   // Determine which navigation items to show based on user role
   const mainNavItems =
-    user?.role === "student" ? studentNavItems : adminNavItems;
+    user?.role === "KID" ? studentNavItems : adminNavItems;
 
   return (
     <aside className="w-56 min-h-screen bg-card border-r border-border flex flex-col">
