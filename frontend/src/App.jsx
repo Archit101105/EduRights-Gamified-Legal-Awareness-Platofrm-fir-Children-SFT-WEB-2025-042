@@ -29,7 +29,8 @@ import Quizzes from "./pages/Quizzes";
 import QuizTake from "./pages/QuizTake";
 import CreateLevels from "./pages/CreateLevels";
 import ModuleDetails from "./pages/ModuleDetails";
-
+import StudentDashboard from "./pages/StudentDashboard";
+import StudentModuleDetails from "./pages/StudentModuleDetails";
 import Explore from "./pages/Explore";
 import CategoryView from "./pages/CategoryView"
 
@@ -53,9 +54,9 @@ function AdminRoute({ children }) {
   if (!isAuthenticated) return <Navigate to="/login" />;
 
  
-  if (user?.role !== 'ADMIN') {
-    return <Navigate to="/achievements" />; 
-  }
+  // if (user?.role !== 'ADMIN') {
+  //   return <Navigate to="/achievements" />; 
+  // }
   
   return children;
 }
@@ -111,6 +112,8 @@ function AppRoutes() {
       
       {/* Routes accessible by all authenticated users */}
       <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+      <Route path="/studentdashboard" element={<ProtectedRoute><StudentDashboard /></ProtectedRoute>} />
+      <Route  path="/student/modules/:moduleId" element={<ProtectedRoute><StudentModuleDetails /></ProtectedRoute>} />
       <Route path="/explore" element={<ProtectedRoute><Explore /></ProtectedRoute>} />
       <Route path="/explore/:categoryId" element={<ProtectedRoute><CategoryView /></ProtectedRoute>} />
       <Route path="/your-plan" element={<ProtectedRoute><YourPlan /></ProtectedRoute>} />

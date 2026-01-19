@@ -20,6 +20,7 @@ import { useAuth } from "@/contexts/AuthContext";
 
 // Student navigation items
 const studentNavItems = [
+  { title: "Home", href: "/studentdashboard", icon: Home },
   { title: "Quizzes", href: "/quizzes", icon: BookOpen },
   { title: "Achievements", href: "/achievements", icon: Trophy },
   { title : "Explore" , href:"/explore", icon: Video }
