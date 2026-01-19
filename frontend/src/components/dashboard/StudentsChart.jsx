@@ -23,7 +23,7 @@ export function StudentsChart() {
     const fetchTotalstudents = async ()=>{
       console.log("fetching students")
       try{
-        const res = await axios.get("http://localhost:5000/api/users/students/count");
+        const res = await axios.get("https://legallit.onrender.com/api/users/students/count");
         
         settotalStudents(res.data.totalStudents)
       }

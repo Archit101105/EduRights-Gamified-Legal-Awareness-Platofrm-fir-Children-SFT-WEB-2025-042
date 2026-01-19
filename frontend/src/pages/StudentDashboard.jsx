@@ -19,7 +19,7 @@ function StudentDashboard() {
  
   const fetchAllModules = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/modules");
+      const res = await axios.get("https://legallit.onrender.com/api/modules");
       setAllModules(res.data.modules);
     } catch (error) {
       console.error("Failed to fetch modules", error);
@@ -30,7 +30,7 @@ function StudentDashboard() {
   const fetchEnrolledModules = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:5000/api/users/my-modules",
+      "https://legallit.onrender.com/api/users/my-modules",
       {
         params: {
           userId: user._id
@@ -49,7 +49,7 @@ function StudentDashboard() {
   e.stopPropagation();
 
   try {
-    await axios.post("http://localhost:5000/api/users/buy", {
+    await axios.post("https://legallit.onrender.com/api/users/buy", {
       userId: user._id,
       moduleId,
     });

@@ -22,7 +22,7 @@ function ModuleDetails() {
   const fetchLevels = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/levels/${moduleId}`
+        `https://legallit.onrender.com/api/levels/${moduleId}`
       );
       setLevels(res.data.levels);
     } catch (error) {
@@ -33,7 +33,7 @@ function ModuleDetails() {
   const fetchEnrolledStudents = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/admin/modules/${moduleId}/enrollments`
+        `https://legallit.onrender.com/api/admin/modules/${moduleId}/enrollments`
       );
       setStudents(res.data.students);
     } catch (error) {

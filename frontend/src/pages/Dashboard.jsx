@@ -16,7 +16,7 @@ export default function Dashboard() {
 
   const fetchModules = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/modules");
+      const res = await axios.get("https://legallit.onrender.com/api/modules");
       setModules(res.data.modules);
     } catch (error) {
       console.error("Failed to fetch modules", error);

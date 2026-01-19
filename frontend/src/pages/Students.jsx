@@ -13,7 +13,7 @@ export default function Students() {
   const fetchStudents = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/admin/students"
+        "https://legallit.onrender.com/api/admin/students"
       );
       setStudents(res.data.students);
     } catch (error) {
@@ -26,7 +26,7 @@ export default function Students() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/admin/students/${id}`
+        `https://legallit.onrender.com/api/admin/students/${id}`
       );
 
       // remove from UI instantly

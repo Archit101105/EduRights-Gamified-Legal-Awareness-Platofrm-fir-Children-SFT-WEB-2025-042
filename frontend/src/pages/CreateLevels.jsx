@@ -19,7 +19,7 @@ function CreateLevels() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post("http://localhost:5000/api/admin/levels", {
+      await axios.post("https://legallit.onrender.com/api/admin/levels", {
         ...level,
         module_id: moduleId,
       });

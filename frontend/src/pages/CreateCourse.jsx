@@ -21,7 +21,7 @@ function CreateCourse() {
   const handleSubmit = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/admin/modules",
+        "https://legallit.onrender.com/api/admin/modules",
         {
           ...form,
           learning_summary: [],

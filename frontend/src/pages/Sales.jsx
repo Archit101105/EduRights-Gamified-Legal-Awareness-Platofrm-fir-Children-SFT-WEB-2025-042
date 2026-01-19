@@ -26,7 +26,7 @@ export default function Sales() {
     const fetchstudents = async ()=>{
       try{
         console.log("Fetching students")
-        const res = await axios.get("http://localhost:5000/api/users/students/count")
+        const res = await axios.get("https://legallit.onrender.com/api/users/students/count")
         settotalStudents(res.data.totalStudents)
         console.log(totalStudents)
       }

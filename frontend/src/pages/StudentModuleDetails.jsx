@@ -8,12 +8,12 @@ export default function StudentModuleDetails() {
   const [module, setModule] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/modules/${moduleId}`)
+    axios.get(`https://legallit.onrender.com/api/modules/${moduleId}`)
       .then(res => setModule(res.data.module));
   }, []);
 
   const handleBuy = async () => {
-    await axios.post("http://localhost:5000/api/users/buy", {
+    await axios.post("https://legallit.onrender.com/api/users/buy", {
       moduleId
     });
     alert("Module Purchased ");
